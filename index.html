@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Spanish SER Research</title>
+  <style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #ffffff;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .page-content {
+        padding: 20px 1%;
+        max-width: 1200px;
+        margin: 0 auto;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+      color: #0073e6;
+      text-align: center;
+    }
+
+    .subtitle {
+      font-size: 1.2em;
+      color: #666;
+      margin-bottom: 20px;
+      text-align: center;
+      max-width: 100%;
+    }
+
+    .section {
+      width: 100%;
+      max-width: 1200px;
+      margin-bottom: 50px;
+    }
+
+    .section h2 {
+      font-size: 1.4em;
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    .section p {
+      font-size: 1em;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    .image-text-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin-top: 30px;
+      align-items: stretch;
+      justify-content: center;
+    }
+
+    .image-text-row img {
+      width: 100%;
+      max-height: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      object-fit: cover;
+    }
+
+    .abstract-column {
+      flex: 1;
+      max-width: 48%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .side-by-side-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .side-by-side-gallery img {
+      flex: 1;
+      max-width: 100%;
+      max-height: 300px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .paper-link, .gradio-link, .code-link {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .paper-link {
+      background-color: #f2f2f2;
+      border: 1px solid #ccc;
+      color: #0056b3;
+    }
+
+    .paper-link:hover {
+      background-color: #e0e0e0;
+    }
+
+    .gradio-link {
+      background-color: #0056b3;
+      color: white;
+      font-size: 1.1em;
+      border: none;
+      margin: 10px auto;
+    }
+
+    .gradio-link:hover {
+      background-color: #003d80;
+    }
+
+    .code-link {
+      background-color: #f9f9f9;
+      border: 1px solid #ccc;
+      color: #333;
+      margin: 5px auto;
+    }
+
+    .code-link:hover {
+      background-color: #e6e6e6;
+    }
+
+    figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    }
+
+    figcaption {
+    font-size: 0.85em;
+    font-style: italic;
+    color: #666;
+    margin-top: 6px;
+    text-align: center;
+    max-width: 90%;
+    }
+
+    .image-text-row figure,
+    .side-by-side-gallery figure {
+    flex: 1;
+    }
+
+    .soft-divider {
+    width: 60%;
+    max-width: 800px;
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 0px auto 30px auto;
+    }
+
+    .back-button {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    color: #333;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.95em;
+    margin: 20px auto;
+    transition: background-color 0.2s ease;
+    }
+
+    .back-button:hover {
+    background-color: #e6e6e6;
+    }
+
+    footer {
+        background-color: #ffffff;
+        border-top: 1px solid #ddd;
+        color: #555;
+        font-size: 0.95em;
+        padding: 30px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .footer-left,
+    .footer-right {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .footer-left img,
+    .footer-right img {
+        height: auto;
+        max-height: 80px;
+        width: auto;
+    }
+
+    .footer-center {
+        text-align: center;
+        flex-grow: 1;
+    }
+
+    .footer-center p {
+        margin: 4px 0;
+    }
+
+
+  </style>
+</head>
+<body>
+    <div class="page-content">
+        <h1>Spanish Speech Emotion Recognition (SER)</h1>
+        <p class="subtitle">Meet the lastest SER results in Spanish.</p>
+        <hr class="soft-divider">
+        <a class="gradio-link" href="https://your-gradio-link-demo.com" target="_blank">▶ Try the SER Demo on Gradio</a>
+        <a href="index.html" class="back-button">← Back to Main</a>
+        
+
+        <div class="section">
+            <h2>Part 1. PTMs as feature extractors for Spanish SER</h2>
+            <hr class="soft-divider" style="margin-left: 0;">
+            <div class="image-text-row">
+                <figure>
+                    <img src="assets/ser_results_summary.png" alt="Summary of best results and SOTA comparison">
+                    <figcaption>We have the highest results in the state-of-the-art, evaluated in 6 different databases.</figcaption>
+                </figure>
+            <div class="abstract-column">
+                <p>This study presents the first comparative evaluation of PTMs for Spanish SER across six models—Whisper, Wav2Vec 2.0, WavLM, HuBERT, TRILLsson, and CLAP—and six emotional speech datasets. Using a layer-wise feature extraction framework with Leave-One-Speaker-Out validation, our method outperforms prior benchmarks, reaching F1-scores of 88.32% (EmoMatchSpanishDB), 99.83% (INTER1SP), and 92.53% (MEACorpus). Results show that optimal emotional features emerge from early to mid layers, depending on model depth. TRILLsson shows strong generalization in speaker-independent tasks, underscoring the importance of architecture choice, fine-tuning, and language-specific adaptation in Spanish SER.</p>
+                <a class="paper-link" href="https://www.mdpi.com/2076-3417/15/8/4340" target="_blank">Read the full paper on MDPI</a>
+            </div>
+            </div>
+
+            <div class="side-by-side-gallery">
+                <figure>
+                    <img src="assets/mean_f1_by_layer.png" alt="F1 per layer" style="height: 80%;">
+                    <figcaption>We perform a layer-wise evaluation to obtain the best PTM along with its optimal layer.</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/mean_f1_by_ptm_loso.png" alt="F1 LOSO" style="height: 80px;">
+                    <figcaption>Our LOSO validation confirms the results: The W2V2-L-XLSR53-ES is the best model for extracting features.</figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <div class="section" >
+            <h2>Part 2. Multitask Learning SER System (Thesis)</h2>
+            <hr class="soft-divider" style="margin-left: 0;">
+            <div class="image-text-row">
+                <div class="abstract-column">
+                    <p>This work introduces the first MTL approach for Spanish SER, trained on six diverse corpora. Using a frozen Wav2Vec2 XLSR encoder and an MLP classifier, the proposed system surpasses the single-task baseline by 2.37 WF1 points, reaching 90.56% in emotion classification, while also achieving near-perfect scores in speaker profiling (99.39%) and regional accent detection (99.91%). Notably, this performance was obtained without any data augmentation or resampling, demonstrating the intrinsic benefits of multitask regularization. The system adheres to rigorous and reproducible evaluation protocols, including weighted F1, Recall and Precision metrics and cross-corpus validation—addressing key methodological gaps in prior Spanish SER studies. Furthermore, by prioritizing generalization over dataset-specific tuning, the model achieves substantial improvements on spontaneous and noisy corpora such as EmoWisconsin, evidencing its robustness for real-world deployment.</p>
+                </div>
+                    <figure>
+                        <img src="assets/WF1_tesis.png" alt="Summary of results in Thesis">
+                        <figcaption>The Multitask model without any data augmentation/balancing is the best approach.</figcaption>
+                    </figure>
+            </div>
+        </div>
+
+        <a class="gradio-link" href="https://your-gradio-link-demo.com" target="_blank">▶ Try the SER Demo on Gradio</a>
+        <a class="code-link" href="https://github.com/your-username/spanish-ser-project" target="_blank">View the Code on GitHub</a>
+        <a href="index.html" class="back-button">← Back to Main</a>
+    </div>
+
+    <footer>
+        <div class="footer-left">
+            <img src="C:\Users\AlxMa\Documents\Python\Tesis\05-final_project\github\main\assets/uv.jpg" alt="UV Logo" style="height: 80px;">
+            <img src="C:\Users\AlxMa\Documents\Python\Tesis\05-final_project\github\main\assets/inaoe.png" alt="INAOE Logo"  style="height: 80px;">
+            <img src="C:\Users\AlxMa\Documents\Python\Tesis\05-final_project\github\main\assets/fie.png" alt="FIE Logo" style="height: 80px;">
+        </div>
+
+        <div class="footer-center">
+            <p><strong>Author:</strong> Alex Mares</p>
+            <p><strong>Collaborating Researchers:</strong></p>
+            <p>Gerardo Díaz Arango</p>
+            <p>Jorge Eduardo Pérez-Jácome Friscione</p>
+            <p>Héctor Vázquez Leal</p>
+        </div>
+
+        <div class="footer-right">
+            <img src="C:\Users\AlxMa\Documents\Python\Tesis\05-final_project\github\main\assets/secihti.png" alt="SECIHTI Logo" style="height: 40px;">
+        </div>
+    </footer>
+
+</body>
+</html>
