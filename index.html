@@ -60,7 +60,7 @@
     }
 
     .section p {
-      font-size: 0.9em;
+      font-size: 1em;
       line-height: 1.6;
       text-align: justify;
     }
@@ -68,7 +68,7 @@
     .image-text-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 40px;
+      gap: 60px;
       margin-top: 30px;
       align-items: stretch;
       justify-content: center;
@@ -76,7 +76,7 @@
 
     .image-text-row img {
       width: 100%;
-      max-height: 100%;
+      height: auto;
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
       object-fit: cover;
@@ -279,7 +279,6 @@
       }
     }
 
-
     @media screen and (max-width: 768px) {
       .page-content {
         width: 90%;
@@ -330,7 +329,7 @@
                     <figcaption>We have the highest results in the state-of-the-art, evaluated in 6 different databases.</figcaption>
                 </figure>
             <div class="abstract-column">
-                <p>This study presents the first comparative evaluation of PTMs for Spanish SER across six models—Whisper, Wav2Vec 2.0, WavLM, HuBERT, TRILLsson, and CLAP—and six emotional speech datasets. Using a layer-wise feature extraction framework with Leave-One-Speaker-Out validation, our method outperforms prior benchmarks, reaching F1-scores of 88.32% (EmoMatchSpanishDB), 99.83% (INTER1SP), and 92.53% (MEACorpus). Results show that optimal emotional features emerge from early to mid layers, depending on model depth. TRILLsson shows strong generalization in speaker-independent tasks, underscoring the importance of architecture choice, fine-tuning, and language-specific adaptation in Spanish SER.</p>
+                <p>This study presents the first comparative evaluation of PTMs for Spanish SER across six models—Whisper, Wav2Vec 2.0, WavLM, HuBERT, TRILLsson, and CLAP—and six emotional speech datasets. Using a layer-wise feature extraction framework with Leave-One-Speaker-Out validation, our method outperforms prior benchmarks, reaching F1-scores of 88.32% (EmoMatchSpanishDB), 99.83% (INTER1SP), and 92.53% (MEACorpus).</p>
                 <a class="paper-link" href="https://www.mdpi.com/2076-3417/15/8/4340" target="_blank">Read the full paper on MDPI</a>
             </div>
             </div>
@@ -352,7 +351,7 @@
             <hr class="soft-divider" style="margin-right: 0;">
             <div class="image-text-row">
                 <div class="abstract-column">
-                    <p>This work introduces the first MTL approach for Spanish SER, trained on six diverse corpora. Using a frozen Wav2Vec2 XLSR encoder and an MLP classifier, the proposed system surpasses the single-task baseline by 2.37 WF1 points, reaching 90.56% in emotion classification, while also achieving near-perfect scores in speaker profiling (99.39%) and regional accent detection (99.91%). Notably, this performance was obtained without any data augmentation or resampling, demonstrating the intrinsic benefits of multitask regularization. The system adheres to rigorous and reproducible evaluation protocols, including weighted F1, Recall and Precision metrics and cross-corpus validation—addressing key methodological gaps in prior Spanish SER studies. Furthermore, by prioritizing generalization over dataset-specific tuning, the model achieves substantial improvements on spontaneous and noisy corpora such as EmoWisconsin, evidencing its robustness for real-world deployment.</p>
+                    <p>This work introduces the first MTL approach for Spanish SER, trained on six diverse corpora. Using a frozen Wav2Vec2 XLSR encoder and an MLP classifier, the proposed system surpasses the single-task baseline by 2.37 WF1 points, reaching 90.56% in emotion classification, while also achieving near-perfect scores in speaker profiling (99.39%) and regional accent detection (99.91%).</p>
                 </div>
                     <figure>
                         <img src="assets/WF1_tesis.png" alt="Summary of results in Thesis">
@@ -363,22 +362,25 @@
 
         <div class="button-row">
             <a class="gradio-link" href="https://your-gradio-link-demo.com" target="_blank">▶ Try the HCI Demo on Gradio</a>
-            <a class="code-link" href="https://github.com/alxmares/Spanish_Emphatic_HCI" target="_blank">View the Code on GitHub</a>
+            <a class="code-link" href="https://github.com/alxmares/Spanish_Speech_Emotion_Recognition" target="_blank">View the Code on GitHub</a>
         </div>
 
 
         <a href="https://alxmares.github.io/HUB_Spanish_SER_HCI/" class="back-button">← Back to Main</a>
         
-        <h2 style="text-align: center; font-size: 0.9em;" >Dataset Overview Dashboard</h2>
-        <hr class="soft-divider" style="margin-left: auto; margin-right: auto;">
-        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; width: 100%; max-width: 100%; margin: 30px auto;">
-          <iframe 
-            title="SPANISH_SER"
-            src="https://app.powerbi.com/view?r=eyJrIjoiYzlkOTM4ZjQtZDhkYi00ZmZkLWExYmEtNWRiNzZjMjAzODljIiwidCI6IjNjOTA3NjUxLWQ4YzYtNGNhNi1hOGE0LTZhMjQyNDMwZTY1MyIsImMiOjR9&pageName=4bdc03cd44a7584c030f" 
-            frameborder="0" 
-            allowfullscreen="true"
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-          </iframe>
+        <div class="section" >
+          <h2 style="text-align: center; font-size: 1.1em;" >Dataset Overview Dashboard</h2>
+          <hr class="soft-divider" style="margin-left: auto; margin-right: auto; margin-bottom: 30px">
+          
+          <div style="position: relative; padding-top: 70%; overflow: hidden; width: 100%; height: auto;">
+            <iframe 
+              title="SPANISH_SER"
+              src="https://app.powerbi.com/view?r=eyJrIjoiYzlkOTM4ZjQtZDhkYi00ZmZkLWExYmEtNWRiNzZjMjAzODljIiwidCI6IjNjOTA3NjUxLWQ4YzYtNGNhNi1hOGE0LTZhMjQyNDMwZTY1MyIsImMiOjR9&pageName=4bdc03cd44a7584c030f" 
+              frameborder="0" 
+              allowfullscreen="true"
+              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+            </iframe>
+        </div>
         </div>
       </div>
 
