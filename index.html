@@ -200,7 +200,7 @@
       max-width: 800px;
       border: none;
       border-top: 1px solid #ddd;
-      margin: 0px auto 30px auto;
+      margin: 0px auto 10px auto;
     }
 
     .back-button {
@@ -225,35 +225,60 @@
       border-top: 1px solid #ddd;
       color: #555;
       font-size: 0.95em;
-      padding: 30px 40px;
+      padding: 30px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
+      gap: 20px;
     }
 
-    .footer-left,
-    .footer-right {
+    .footer-logos-left,
+    .footer-logos-right {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 15px;
+      flex: 1;
+      justify-content: center;
     }
 
-    .footer-left img,
-    .footer-right img {
+    .footer-logos-left img,
+    .footer-logos-right img {
       height: auto;
       max-height: 80px;
       width: auto;
     }
 
-    .footer-center {
+    .footer-authors {
+      flex: 2;
+      min-width: 300px;
       text-align: center;
-      flex-grow: 1;
     }
 
-    .footer-center p {
+    .footer-authors p {
       margin: 4px 0;
     }
+
+    /* Responsive adjustments */
+    @media screen and (max-width: 768px) {
+      footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .footer-authors {
+        order: -1;
+        width: 100%;
+      }
+
+      .footer-logos-left,
+      .footer-logos-right {
+        justify-content: center;
+        margin-top: 10px;
+      }
+    }
+
 
     @media screen and (max-width: 768px) {
       .page-content {
@@ -273,6 +298,14 @@
         flex-direction: column;
       }
     }
+    .author-tagline {
+      text-align: center;
+      font-size: 0.9em;
+      color: #999;
+      margin-top: 0px;
+      margin-bottom: 20px;
+    }
+
   </style>
 </head>
 
@@ -281,6 +314,7 @@
         <h1>Spanish Speech Emotion Recognition (SER)</h1>
         <p class="subtitle">Meet the lastest SER results in Spanish.</p>
         <hr class="soft-divider">
+        <p class="author-tagline">By: Alex Mares</p>
 
         <div class="button-row">
             <a class="gradio-link" href="https://your-gradio-link-demo.com" target="_blank">▶ Try the HCI Demo on Gradio</a>
@@ -288,7 +322,7 @@
         </div>
 
         <div class="section">
-            <h2>Part 1. PTMs as feature extractors for Spanish SER</h2>
+          <h2>Part 1. PTMs as feature extractors for Spanish SER</h2>
             <hr class="soft-divider" style="margin-left: 0;">
             <div class="image-text-row">
                 <figure>
@@ -314,8 +348,8 @@
         </div>
 
         <div class="section" >
-            <h2>Part 2. Multitask Learning SER System (Thesis)</h2>
-            <hr class="soft-divider" style="margin-left: 0;">
+          <h2 style="text-align: right;">Part 2. Multitask Learning SER System (Thesis)</h2>
+            <hr class="soft-divider" style="margin-right: 0;">
             <div class="image-text-row">
                 <div class="abstract-column">
                     <p>This work introduces the first MTL approach for Spanish SER, trained on six diverse corpora. Using a frozen Wav2Vec2 XLSR encoder and an MLP classifier, the proposed system surpasses the single-task baseline by 2.37 WF1 points, reaching 90.56% in emotion classification, while also achieving near-perfect scores in speaker profiling (99.39%) and regional accent detection (99.91%). Notably, this performance was obtained without any data augmentation or resampling, demonstrating the intrinsic benefits of multitask regularization. The system adheres to rigorous and reproducible evaluation protocols, including weighted F1, Recall and Precision metrics and cross-corpus validation—addressing key methodological gaps in prior Spanish SER studies. Furthermore, by prioritizing generalization over dataset-specific tuning, the model achieves substantial improvements on spontaneous and noisy corpora such as EmoWisconsin, evidencing its robustness for real-world deployment.</p>
@@ -334,33 +368,48 @@
 
 
         <a href="https://alxmares.github.io/HUB_Spanish_SER_HCI/" class="back-button">← Back to Main</a>
-    </div>
+        
+        <h2 style="text-align: center;">Dataset Overview Dashboard</h2>
+        <hr class="soft-divider" style="margin-left: auto; margin-right: auto;">
+        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; width: 100%; max-width: 100%; margin: 30px auto;">
+          <iframe 
+            title="SPANISH_SER"
+            src="https://app.powerbi.com/view?r=eyJrIjoiYzlkOTM4ZjQtZDhkYi00ZmZkLWExYmEtNWRiNzZjMjAzODljIiwidCI6IjNjOTA3NjUxLWQ4YzYtNGNhNi1hOGE0LTZhMjQyNDMwZTY1MyIsImMiOjR9&pageName=4bdc03cd44a7584c030f" 
+            frameborder="0" 
+            allowfullscreen="true"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+          </iframe>
+        </div>
+      </div>
 
+  
     <footer>
-        <div class="footer-left">
-            <img src="assets/uv.jpg" alt="UV Logo" style="height: 80px;">
-            <img src="assets/inaoe.png" alt="INAOE Logo"  style="height: 80px;">
-            <img src="assets/fie.png" alt="FIE Logo" style="height: 80px;">
-        </div>
+      <div class="footer-logos-left">
+        <img src="assets/uv.jpg" alt="UV Logo">
+        <img src="assets/inaoe.png" alt="INAOE Logo">
+        <img src="assets/fie.png" alt="FIE Logo">
+      </div>
 
-        <div class="footer-center">
-            <p><strong>Author:</strong> Alex Mares
-            <a href="https://www.linkedin.com/in/alxmrs/" target="_blank" title="LinkedIn">🔗</a>
-            <p><strong>Collaborating Researchers:</strong></p>
-            <p>Gerardo Díaz Arango
-            <a href="https://www.researchgate.net/profile/Gerardo-Diaz-Arango" target="_blank" title="ResearchGate">🔗</a>
-            </p>
-            <p>Jorge Eduardo Pérez-Jácome Friscione
-            <a href="mailto:jperezjacome@uv.mx" title="Email">📧</a>
-            </p>
-            <p>Héctor Vázquez Leal
-                <a href="https://www.researchgate.net/profile/Hector-Vazquez-Leal" target="_blank" title="ResearchGate">🔗</a>
-            </p>
-        </div>
+      <div class="footer-authors">
+        <p><strong>Author:</strong> Alex Mares
+          <a href="https://www.linkedin.com/in/alxmrs/" target="_blank" title="LinkedIn">🔗</a>
+        </p>
+        <p><strong>Collaborating Researchers:</strong></p>
+        <p>Gerardo Díaz Arango
+          <a href="https://www.researchgate.net/profile/Gerardo-Diaz-Arango" target="_blank" title="ResearchGate">🔗</a>
+        </p>
+        <p>Jorge Eduardo Pérez-Jácome Friscione
+          <a href="mailto:jperezjacome@uv.mx" title="Email">📧</a>
+        </p>
+        <p>Héctor Vázquez Leal
+          <a href="https://www.researchgate.net/profile/Hector-Vazquez-Leal" target="_blank" title="ResearchGate">🔗</a>
+        </p>
+      </div>
 
-        <div class="footer-right">
-            <img src="assets/secihti.png" alt="SECIHTI Logo" style="height: 40px;">
-        </div>
+      <div class="footer-logos-right">
+        
+        <img src="assets/secihti.png" alt="SECIHTI Logo" style="max-height: 40px;">
+      </div>
     </footer>
 
 </body>
